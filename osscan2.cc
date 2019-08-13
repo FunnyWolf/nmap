@@ -2231,7 +2231,8 @@ int HostOsScan::send_closedudp_probe(HostOsScanStats *hss,
   ethptr = hss->fill_eth_nfo(&eth, ethsd);
 
   /* if (!patternbyte) patternbyte = (get_random_uint() % 60) + 65; */
-  memset(data, patternbyte, datalen);
+  get_random_bytes(data,datalen);
+  //memset(data, patternbyte, datalen);
 
   /*  while (!id) id = get_random_uint(); */
 

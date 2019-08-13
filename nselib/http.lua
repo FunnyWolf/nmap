@@ -156,7 +156,7 @@ local have_ssl, openssl = pcall(require,'openssl')
 --Use zlib if we have it
 local have_zlib, zlib = pcall(require,'zlib')
 
-USER_AGENT = stdnse.get_script_args('http.useragent') or "Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)"
+USER_AGENT = stdnse.get_script_args('http.useragent') or "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0"
 local host_header = stdnse.get_script_args('http.host')
 local MAX_REDIRECT_COUNT = 5
 local MAX_BODY_SIZE = tonumber(stdnse.get_script_args('http.max-body-size')) or 2*1024*1024

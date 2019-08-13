@@ -83,7 +83,7 @@ local function testversion(host, port, version)
       },
     })
 
-  local payload = "Nmap ssl-heartbleed"
+  local payload = "google google-codes"
   local hb = tls.record_write("heartbeat", version, string.pack("B>I2",
       1, -- HeartbeatMessageType heartbeat_request
       0x4000) -- payload length (falsified)

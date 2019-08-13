@@ -104,7 +104,7 @@ local function build_injection_vector(urls)
 
       for k, v in pairs(qtab) do
         old_qtab = qtab[k];
-        qtab[k] = qtab[k] ..  "' OR sqlspider"
+        qtab[k] = qtab[k] ..  "' OR google"
 
         utab.query = url.build_query(qtab)
         urlstr = url.build(utab)
@@ -195,7 +195,7 @@ local function check_form(form, host, port, path)
   for _,field in ipairs(form["fields"]) do
     if sqli_field(field["type"]) then
       stdnse.debug2("checking field %s", field["name"])
-      postdata[field["name"]] = "' OR sqlspider"
+      postdata[field["name"]] = "' OR google"
       response = sending_function(postdata)
       if response and response.body and response.status==200 then
         if check_injection_response(response) then

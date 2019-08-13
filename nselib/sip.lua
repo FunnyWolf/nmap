@@ -148,7 +148,7 @@ SessionData = {
   --- Retrieves the SIP users full name
   -- @name SessionData.getName
   -- @return name string containing the users full name
-  getName = function(self) return self.name or "Nmap NSE" end,
+  getName = function(self) return self.name or "FreeSWITCH-mod_sofia" end,
 }
 
 -- The session class holds the code necessary to register a SIP session
@@ -527,7 +527,7 @@ Request = {
     setmetatable(o, self)
     self.__index = self
 
-    o.ua = "Nmap NSE"
+    o.ua = "FreeSWITCH-mod_sofia"
     o.protocol = proto or "UDP"
     o.expires = 0
     o.allow = "PRACK, INVITE ,ACK, BYE, CANCEL, UPDATE, SUBSCRIBE"
@@ -607,7 +607,7 @@ Request = {
 
   --- Sets the User Agent being used to connect to the SIP server
   -- @name Request.setUA
-  -- @param ua string containing the User-Agent name (defaults to Nmap NSE)
+  -- @param ua string containing the User-Agent name (defaults to FreeSWITCH-mod_sofia)
   setUA = function(self, ua) self.ua = ua end,
 
   --- Sets the caller ID information of the SIP request
