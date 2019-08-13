@@ -1,5 +1,10 @@
 Nmap [![Build Status](https://travis-ci.org/nmap/nmap.svg?branch=master)](https://travis-ci.org/nmap/nmap)
 ====
+## 说明
+
+修改nmap的特征流量，过 emergingthreats 的公开ids规则。
+参考
+> https://github.com/al0ne/Nmap_Bypass_IDS
 
 Nmap is released under a custom license, which is based on (but not compatible
 with) GPLv2. The Nmap license allows free usage by end users, and we also offer
